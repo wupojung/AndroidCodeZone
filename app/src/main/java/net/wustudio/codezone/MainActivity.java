@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         switch (action) {
             case CUSTOMER_SHAPE_DRAWABLE:
                 btn.setText("Customer ShapeDrawable");
+                btn.setId(R.id.customer_view);  //自ids.xml 中取得
                 break;
             case CUSTOMER_SURFACE_VIEW:
                 btn.setText("Customer SurfaceView");
