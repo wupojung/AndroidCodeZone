@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         CUSTOMER_SHAPE_DRAWABLE,
         CUSTOMER_SURFACE_VIEW,
         CUSTOMER_SURFACE_VIEW_WITH_SHAPE,
+        TOUCH_EVENT_DEMO,
     }
 
     @Override
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         llMenu.addView(getButton(eButtonAction.CUSTOMER_SHAPE_DRAWABLE));
         llMenu.addView(getButton(eButtonAction.CUSTOMER_SURFACE_VIEW));
         llMenu.addView(getButton(eButtonAction.CUSTOMER_SURFACE_VIEW_WITH_SHAPE));
+
+        llMenu.addView(getButton(eButtonAction.TOUCH_EVENT_DEMO));
     }
 
 
@@ -43,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case CUSTOMER_SURFACE_VIEW_WITH_SHAPE:
                 btn.setText("Customer SurfaceView with Shape");
+                break;
+            case TOUCH_EVENT_DEMO:
+                btn.setText("Touch Event Demo");
                 break;
         }
         btn.setOnClickListener(onClickListener);
@@ -67,6 +73,10 @@ public class MainActivity extends AppCompatActivity {
                 case CUSTOMER_SURFACE_VIEW_WITH_SHAPE:
                     intent.putExtra("type", "surface_view_shape");
                     break;
+                case TOUCH_EVENT_DEMO:
+                    intent.setClass(MainActivity.this, TouchEventDemo.class);
+                    startActivity(intent);
+                    return;
             }
             //endregion
 

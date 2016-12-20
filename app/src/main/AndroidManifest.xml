@@ -17,6 +17,7 @@
         </activity>
 
         <activity android:name=".CustomerViewDemo" />
+        <activity android:name=".TouchEventDemo" />
     </application>
 
 </manifest>
