@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:text="points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvPoints"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_alignBaseline="@+id/tvScore"
+        android:layout_alignBottom="@+id/tvScore"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="10000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvScore"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_alignBottom="@+id/tvCreated"
+        android:layout_toLeftOf="@+id/tvPoints"
+        android:layout_toStartOf="@+id/tvPoints" />
+
+    <TextView
+        android:text="USERNAME"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvUserName"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tvRank"
+        android:layout_toEndOf="@+id/tvRank" />
+
+    <TextView
+        android:text="2016/12/01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCreated"
+        android:layout_below="@+id/tvUserName"
+        android:layout_toRightOf="@+id/tvRank"
+        android:layout_toEndOf="@+id/tvRank" />
+
+    <TextView
+        android:text="1st"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvRank"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_alignBottom="@+id/tvCreated"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

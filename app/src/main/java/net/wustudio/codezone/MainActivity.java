@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         CUSTOMER_SURFACE_VIEW,
         CUSTOMER_SURFACE_VIEW_WITH_SHAPE,
         TOUCH_EVENT_DEMO,
+        SCORE_VIEW,
     }
 
     @Override
@@ -25,11 +26,12 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout llMenu = (LinearLayout) findViewById(R.id.llMenu);
 
         //新增
-        llMenu.addView(getButton(eButtonAction.CUSTOMER_SHAPE_DRAWABLE));
-        llMenu.addView(getButton(eButtonAction.CUSTOMER_SURFACE_VIEW));
-        llMenu.addView(getButton(eButtonAction.CUSTOMER_SURFACE_VIEW_WITH_SHAPE));
+       // llMenu.addView(getButton(eButtonAction.CUSTOMER_SHAPE_DRAWABLE));
+       // llMenu.addView(getButton(eButtonAction.CUSTOMER_SURFACE_VIEW));
+       // llMenu.addView(getButton(eButtonAction.CUSTOMER_SURFACE_VIEW_WITH_SHAPE));
 
-        llMenu.addView(getButton(eButtonAction.TOUCH_EVENT_DEMO));
+       // llMenu.addView(getButton(eButtonAction.TOUCH_EVENT_DEMO));
+        llMenu.addView(getButton(eButtonAction.SCORE_VIEW));
     }
 
 
@@ -49,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case TOUCH_EVENT_DEMO:
                 btn.setText("Touch Event Demo");
+                break;
+            case SCORE_VIEW:
+                btn.setText("Score List View Demo");
                 break;
         }
         btn.setOnClickListener(onClickListener);
@@ -75,6 +80,10 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case TOUCH_EVENT_DEMO:
                     intent.setClass(MainActivity.this, TouchEventDemo.class);
+                    startActivity(intent);
+                    return;
+                case SCORE_VIEW:
+                    intent.setClass(MainActivity.this, ScoreActivity.class);
                     startActivity(intent);
                     return;
             }
