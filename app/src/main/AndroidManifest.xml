@@ -19,6 +19,7 @@
         <activity android:name=".CustomerViewDemo" />
         <activity android:name=".TouchEventDemo" />
         <activity android:name=".ScoreActivity" />
+        <activity android:name=".CameraActivity" />"
     </application>
 
 </manifest>

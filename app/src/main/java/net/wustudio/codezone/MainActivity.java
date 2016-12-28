@@ -1,12 +1,11 @@
 package net.wustudio.codezone;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     enum eButtonAction {
@@ -15,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         CUSTOMER_SURFACE_VIEW_WITH_SHAPE,
         TOUCH_EVENT_DEMO,
         SCORE_VIEW,
+        OPEN_CAMERA,
     }
 
     @Override
@@ -26,12 +26,15 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout llMenu = (LinearLayout) findViewById(R.id.llMenu);
 
         //新增
-       // llMenu.addView(getButton(eButtonAction.CUSTOMER_SHAPE_DRAWABLE));
-       // llMenu.addView(getButton(eButtonAction.CUSTOMER_SURFACE_VIEW));
-       // llMenu.addView(getButton(eButtonAction.CUSTOMER_SURFACE_VIEW_WITH_SHAPE));
+        // llMenu.addView(getButton(eButtonAction.CUSTOMER_SHAPE_DRAWABLE));
+        // llMenu.addView(getButton(eButtonAction.CUSTOMER_SURFACE_VIEW));
+        // llMenu.addView(getButton(eButtonAction.CUSTOMER_SURFACE_VIEW_WITH_SHAPE));
 
-       // llMenu.addView(getButton(eButtonAction.TOUCH_EVENT_DEMO));
-        llMenu.addView(getButton(eButtonAction.SCORE_VIEW));
+        // llMenu.addView(getButton(eButtonAction.TOUCH_EVENT_DEMO));
+        // llMenu.addView(getButton(eButtonAction.SCORE_VIEW));
+        llMenu.addView(getButton(eButtonAction.OPEN_CAMERA));
+
+
     }
 
 
@@ -54,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case SCORE_VIEW:
                 btn.setText("Score List View Demo");
+                break;
+            case OPEN_CAMERA:
+                btn.setText("Open Camera Demo");
                 break;
         }
         btn.setOnClickListener(onClickListener);
@@ -84,6 +90,10 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 case SCORE_VIEW:
                     intent.setClass(MainActivity.this, ScoreActivity.class);
+                    startActivity(intent);
+                    return;
+                case OPEN_CAMERA:
+                    intent.setClass(MainActivity.this, CameraActivity.class);
                     startActivity(intent);
                     return;
             }
