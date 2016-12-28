@@ -22,6 +22,7 @@
         <activity android:name=".ScoreActivity" />
         <activity android:name=".CameraActivity" />"
         <activity android:name=".WebViewActivity" />
+        <activity android:name=".SharedPreferencesAvtivity" />
     </application>
 
 </manifest>

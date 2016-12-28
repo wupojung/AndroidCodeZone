@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         SCORE_VIEW,
         OPEN_CAMERA,
         WEB_VIEW_DEMO,
+        SHARED_PREFERENCES,
     }
 
     @Override
@@ -34,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
         // llMenu.addView(getButton(eButtonAction.TOUCH_EVENT_DEMO));
         // llMenu.addView(getButton(eButtonAction.SCORE_VIEW));
         //llMenu.addView(getButton(eButtonAction.OPEN_CAMERA));
-        llMenu.addView(getButton(eButtonAction.WEB_VIEW_DEMO));
+        //llMenu.addView(getButton(eButtonAction.WEB_VIEW_DEMO));
+        llMenu.addView(getButton(eButtonAction.SHARED_PREFERENCES));
     }
 
 
@@ -64,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
             case WEB_VIEW_DEMO:
                 btn.setText("Web View Demo");
                 break;
+            case SHARED_PREFERENCES:
+                btn.setText("Shared Preferences Demo");
+                break;
+
         }
         btn.setOnClickListener(onClickListener);
 
@@ -101,6 +107,10 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 case WEB_VIEW_DEMO:
                     intent.setClass(MainActivity.this, WebViewActivity.class);
+                    startActivity(intent);
+                    return;
+                case SHARED_PREFERENCES:
+                    intent.setClass(MainActivity.this, SharedPreferencesAvtivity.class);
                     startActivity(intent);
                     return;
             }
